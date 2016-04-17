@@ -20,15 +20,16 @@ Route::get('/', ['as'=>'dashboard', function () {
 	}
 }]);
 
-Route::get('/demo', function () {
+Route::get('demo', function () {
 	setcookie('qbus_demo', 'demo', time()+60*60*24);
 	return redirect('/');
 });
 
-Route::get('/work-new', ['as'=>'work-new', function () {
-    return view('pages.new-work');
+Route::get('work-new', ['as'=>'work-new', function () {
+    return view('pages.work-new');
 }]);
 
+Route::resource('manage-process', 'ManageProcessController');
 
 /*
 |--------------------------------------------------------------------------

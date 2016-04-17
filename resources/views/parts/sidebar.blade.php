@@ -76,14 +76,14 @@
           </ul>
         </li>
 
-        <li class="treeview">
+        <li class="{{ Ekko::areActiveRoutes(['manage-process.index']) }} treeview">
           <a href="#">
             <i class="fa fa-wrench"></i>
             <span>Register</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/manage-process"><i class="fa fa-circle"></i> Processer</a></li>
+            <li class="{{ Ekko::isActiveRoute('manage-process.index') }}"><a href="{{ route('manage-process.index') }}"><i class="fa fa-circle"></i> Processer</a></li>
             <li><a href="#"><i class="fa fa-circle"></i> Lokaler</a></li>
             <li><a href="#"><i class="fa fa-circle"></i> Utrustning</a></li>
             <li><a href="#"><i class="fa fa-circle"></i> Material</a></li>
