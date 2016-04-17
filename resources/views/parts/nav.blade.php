@@ -203,30 +203,30 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{ asset('assets/images/aek.png') }}" class="user-image" alt="User Image">
-              <span class="hidden-xs">Andreas Ek</span>
+              <img src="{{ asset('assets/images/128.jpg') }}" class="user-image online" alt="User Image">
+              <span class="hidden-xs">Erika Gustavsson</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="{{ asset('assets/images/aek.png') }}" class="img-circle" alt="User Image">
+                <img src="{{ asset('assets/images/128.jpg') }}" class="img-circle" alt="User Image">
 
                 <p>
-                  Andreas Ek - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  Erika Gustavsson - Kvalitetsansvarig
+                  <small>Medlem sedan november 2015</small>
                 </p>
               </li>
               <!-- Menu Body -->
               <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
+                    <a href="#">Följade</a>
                   </div>
                   <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
+                    <a href="#">Sälj</a>
                   </div>
                   <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
+                    <a href="#">Vänner</a>
                   </div>
                 </div>
                 <!-- /.row -->
@@ -234,10 +234,10 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="#" class="btn btn-default btn-flat">Profil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="#" class="btn btn-default btn-flat">Logga ut</a>
                 </div>
               </li>
             </ul>
