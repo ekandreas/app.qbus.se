@@ -45,6 +45,7 @@
         } );
 
 	    $('#users-table').DataTable({
+            dom: "Blfrtip",
 	        processing: true,
 	        serverSide: true,
             language: { "url": "//cdn.datatables.net/plug-ins/1.10.11/i18n/Swedish.json" },			        
@@ -53,8 +54,23 @@
                 @foreach($datatable['fields'] as $key => $value)
                     { data: '{!! $value['name'] !!}', 'name': '{!! $value['name'] !!}' },
                 @endforeach
+	        ],
+	        select: true,
+	        buttons: [
+	            { extend: "create", editor: editor },
+	            { extend: "edit",   editor: editor },
+	            {
+	                extend: 'collection',
+	                text: 'Exportera',
+	                buttons: [
+	                    'excel',
+	                    'csv',
+	                    'pdf',
+	                    'print'
+	                ]
+	            }
 	        ]
-	    });
+       	    });
 	});
 	</script>
 @endsection
