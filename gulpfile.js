@@ -23,6 +23,7 @@ elixir(function(mix) {
         './vendor/almasaeed2010/adminlte/plugins/datepicker/datepicker3.css',
         './vendor/almasaeed2010/adminlte/plugins/daterangepicker/daterangepicker-bs3.css',
         './vendor/almasaeed2010/adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css',
+        './vendor/datatables/media/css/jquery.dataTables.min.css',
     ], 'public/assets/css');
 
     mix.copy([
@@ -52,6 +53,7 @@ elixir(function(mix) {
         './vendor/almasaeed2010/adminlte/plugins/fastclick/fastclick.js',
         './vendor/almasaeed2010/adminlte/dist/js/app.min.js',
         './vendor/almasaeed2010/adminlte/dist/js/demo.js',
+        './vendor/datatables/media/js/jquery.dataTables.js',
     ], 'public/assets/js');
 
 });

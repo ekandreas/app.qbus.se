@@ -30,6 +30,7 @@ Route::get('work-new', ['as'=>'work-new', function () {
 }]);
 
 Route::resource('manage-process', 'ManageProcessController');
+Route::get('manage-process.data', ['uses'=>'ManageProcessController@anyData', 'as'=>'manage-process.data']);
 
 /*
 |--------------------------------------------------------------------------

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Datatables;
+use App\User;
 
 class ManageProcessController extends Controller
 {
@@ -83,4 +85,14 @@ class ManageProcessController extends Controller
     {
         //
     }
+
+    /**
+     * Process datatables ajax request.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function anyData() {
+        return Datatables::of(User::query())->make(true);
+    }
+
 }

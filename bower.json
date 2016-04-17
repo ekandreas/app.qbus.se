@@ -3,6 +3,7 @@
   "version": "0.1",
   "dependencies": {
     "font-awesome": "~4",
-    "d3" : "~3"
+    "d3": "~3",
+    "datatables": "DataTables#^1.10.11"
   }
 }
