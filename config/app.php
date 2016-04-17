@@ -156,6 +156,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Custom Qbus providers...
+         */
+        Laravelista\Ekko\EkkoServiceProvider::class,
+
     ],
 
     /*
@@ -201,6 +206,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
 
     ],
 

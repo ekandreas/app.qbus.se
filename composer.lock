@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "eec6259a7f06c2833c3e4d520624588c",
-    "content-hash": "f51e9fc51bc6e1d07016eefeca3c44ef",
+    "hash": "d4bdbec6a0504fa5ba3372ff753ecd9e",
+    "content-hash": "0e89077c3e8290f2085cd88f68e082af",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -473,6 +473,49 @@
                 "laravel"
             ],
             "time": "2016-04-03 01:43:55"
+        },
+        {
+            "name": "laravelista/ekko",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravelista/Ekko.git",
+                "reference": "5cef0e992d712ffbddc66ab5856085251f332dce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravelista/Ekko/zipball/5cef0e992d712ffbddc66ab5856085251f332dce",
+                "reference": "5cef0e992d712ffbddc66ab5856085251f332dce",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~4.0|~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Laravelista\\Ekko\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mario Basic",
+                    "email": "mario.basic@outlook.com"
+                }
+            ],
+            "description": "Laravel helper for detecting active navigation menu items and applying bootstrap classes.",
+            "keywords": [
+                "bootstrap",
+                "helper",
+                "laravel",
+                "navigation"
+            ],
+            "time": "2015-05-25 14:19:28"
         },
         {
             "name": "league/flysystem",

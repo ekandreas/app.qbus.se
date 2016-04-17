@@ -26,23 +26,25 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MENY</li>
-        <li class="active treeview">
-          <a href="#">
+        <li class="{{ Ekko::isActiveRoute('dashboard') }} treeview">
+          <a href="{{ route('dashboard') }}">
             <i class="fa fa-dashboard"></i> <span>Hem</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="/"><i class="fa fa-circle text-success"></i> Start</a></li>
+            <li class="{{ Ekko::isActiveRoute('dashboard') }}"><a href="{{ route('dashboard') }}"><i class="fa fa-circle text-success"></i> Start</a></li>
           </ul>
         </li>
 
-        <li class="treeview">
-          <a href="#">
+        <li class="{{ Ekko::areActiveRoutes(['work-new']) }} treeview">
+          <a href="{{ route('work-new') }}">
             <i class="fa fa-star"></i>
             <span>Kvalitetsarbete</span>
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/new-work"><i class="fa fa-star-o"></i> Ny genomlysning</a></li>
+            <li class="{{ Ekko::isActiveRoute('work-new') }}"><a href="{{ route('work-new') }}"><i class="fa fa-star-o"></i> Skapa ny</a></li>
+            <li><a href="{{ route('work-new') }}"><i class="fa fa-star-half-o"></i> Pågående</a></li>
+            <li><a href="{{ route('work-new') }}"><i class="fa fa-star"></i> Avslutade</a></li>
           </ul>
         </li>
 
@@ -81,6 +83,7 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
+            <li><a href="/manage-process"><i class="fa fa-circle"></i> Processer</a></li>
             <li><a href="#"><i class="fa fa-circle"></i> Lokaler</a></li>
             <li><a href="#"><i class="fa fa-circle"></i> Utrustning</a></li>
             <li><a href="#"><i class="fa fa-circle"></i> Material</a></li>
@@ -110,7 +113,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-users"></i> Användare</a></li>
-            <li><a href="#"><i class="fa fa-circle"></i> Klinik</a></li>
+            <li><a href="#"><i class="fa fa-circle"></i> Team</a></li>
             <li><a href="#"><i class="fa fa-circle"></i> Grupper</a></li>
             <li><a href="#"><i class="fa fa-circle"></i> Roller</a></li>
             <li><a href="#"><i class="fa fa-circle"></i> Rättigheter</a></li>

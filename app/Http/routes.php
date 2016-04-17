@@ -11,23 +11,23 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['as'=>'dashboard', function () {
 	if( !isset($_COOKIE["qbus_demo"]) ) {
 		return redirect('https://www.qbus.se/');
 	}
 	else {
 	    return view('pages.dashboard');
 	}
-});
+}]);
 
 Route::get('/demo', function () {
 	setcookie('qbus_demo', 'demo', time()+60*60*24);
 	return redirect('/');
 });
 
-Route::get('/new-work', function () {
+Route::get('/work-new', ['as'=>'work-new', function () {
     return view('pages.new-work');
-});
+}]);
 
 
 /*
