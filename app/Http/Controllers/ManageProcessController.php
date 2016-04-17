@@ -17,7 +17,32 @@ class ManageProcessController extends Controller
      */
     public function index()
     {
-        return view('pages.manage-process.index');
+        $datatable = [
+            'fields' => [
+                [
+                    'label' => 'ID',
+                    'name' => 'id',
+                ],
+                [
+                    'label' => 'Namn',
+                    'name' => 'name',
+                ],
+                [
+                    'label' => 'E-postadress',
+                    'name' => 'email',
+                ],
+                [
+                    'label' => 'Skapad',
+                    'name' => 'created_at',
+                ],
+                [
+                    'label' => 'Uppdaterad',
+                    'name' => 'updated_at',
+                ],
+            ]           
+        ];
+
+        return view('pages.manage-process.index', compact('datatable'));
     }
 
     /**
@@ -91,8 +116,15 @@ class ManageProcessController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function anyData() {
+    public function dataTables() {
         return Datatables::of(User::query())->make(true);
+    }
+
+    /**
+     * Process editorDataTables ajax request.
+     */
+    public function editorData() {
+        //return Datatables::of(User::query())->make(true);
     }
 
 }

@@ -12,15 +12,13 @@
 		<!-- /.box-header -->
 		<div class="box-body">
 		    <table class="table table-bordered" id="users-table">
-		        <thead>
-		            <tr>
-		                <th>Id</th>
-		                <th>Name</th>
-		                <th>Email</th>
-		                <th>Created At</th>
-		                <th>Updated At</th>
-		            </tr>
-		        </thead>
+		    	<thead>
+	                <tr>
+	                    @foreach($datatable['fields'] as $key => $value)
+	                        <th>{!! $value['label'] !!}</th>
+	                    @endforeach
+	                </tr>
+                </thead>
 		    </table>
 		</div>
 	</div>
@@ -29,17 +27,32 @@
 @section('scripts')
 <script>
 	$(function() {
+
+		editor = new $.fn.dataTable.Editor( {
+            ajax: {
+                url: '{!! route('manage-process.editordata') !!}',
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            },
+            table: '#users-table',
+            idSrc: "id",
+            fields: [
+                @foreach($datatable['fields'] as $key => $value)
+                    { label: '{!! $value['name'] !!}', 'name': '{!! $value['name'] !!}' },
+                @endforeach
+            ]
+        } );
+
 	    $('#users-table').DataTable({
 	        processing: true,
 	        serverSide: true,
             language: { "url": "//cdn.datatables.net/plug-ins/1.10.11/i18n/Swedish.json" },			        
-	        ajax: '{!! route('manage-process.data') !!}',
+	        ajax: '{!! route('manage-process.datatables') !!}',
 	        columns: [
-	            { data: 'id', name: 'id' },
-	            { data: 'name', name: 'name' },
-	            { data: 'email', name: 'email' },
-	            { data: 'created_at', name: 'created_at' },
-	            { data: 'updated_at', name: 'updated_at' }
+                @foreach($datatable['fields'] as $key => $value)
+                    { data: '{!! $value['name'] !!}', 'name': '{!! $value['name'] !!}' },
+                @endforeach
 	        ]
 	    });
 	});
