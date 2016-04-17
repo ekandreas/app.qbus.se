@@ -33,6 +33,10 @@ elixir(function(mix) {
       './vendor/almasaeed2010/adminlte/bootstrap/fonts',
     ], 'public/assets/fonts');
 
+    mix.copy([
+      './resources/assets/pages'
+    ], 'public/assets/pages');
+
     mix.scripts([
         './vendor/almasaeed2010/adminlte/plugins/jQuery/jQuery-2.2.0.min.js',
         './vendor/almasaeed2010/adminlte/bootstrap/js/bootstrap.min.js',
@@ -47,7 +51,6 @@ elixir(function(mix) {
         './vendor/almasaeed2010/adminlte/plugins/slimScroll/jquery.slimscroll.min.js',
         './vendor/almasaeed2010/adminlte/plugins/fastclick/fastclick.js',
         './vendor/almasaeed2010/adminlte/dist/js/app.min.js',
-        './resources/assets/js/dashboard.js',
         './vendor/almasaeed2010/adminlte/dist/js/demo.js',
     ], 'public/assets/js');
 

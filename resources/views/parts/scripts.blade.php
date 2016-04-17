@@ -10,3 +10,5 @@
 <script>
   $.widget.bridge('uibutton', $.ui.button);
 </script>
+
+@yield('scripts')
