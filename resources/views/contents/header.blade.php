@@ -1,11 +1,10 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Start
-        <small>Översikt</small>
+        @yield('page-title', 'Översikt')
+        <small>
+          @yield('parent-title', 'Start')
+        </small>
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Hem</a></li>
-        <li class="active">Start</li>
-      </ol>
+      @include('contents.breadcrumbs')
     </section>

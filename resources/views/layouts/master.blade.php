@@ -17,9 +17,7 @@
     <!-- Main content -->
     <section class="content">
 
-      @include('contents.boxes')
-
-      @include('contents.dashboard')
+      @yield('contents')
 
     </section>
     <!-- /.content -->

@@ -25,6 +25,11 @@ Route::get('/demo', function () {
 	return redirect('/');
 });
 
+Route::get('/new-work', function () {
+    return view('pages.new-work');
+});
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
