@@ -27,7 +27,8 @@ elixir(function(mix) {
     ], 'public/assets/css');
 
     mix.copy([
-      './resources/assets/images'
+      './resources/assets/images',
+      './vendor/datatables/media/images',
     ], 'public/assets/images');
 
     mix.copy([

@@ -32,6 +32,7 @@
 	    $('#users-table').DataTable({
 	        processing: true,
 	        serverSide: true,
+            language: { "url": "//cdn.datatables.net/plug-ins/1.10.11/i18n/Swedish.json" },			        
 	        ajax: '{!! route('manage-process.data') !!}',
 	        columns: [
 	            { data: 'id', name: 'id' },
