@@ -160,6 +160,7 @@ return [
          * Custom Qbus providers...
          */
         Laravelista\Ekko\EkkoServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
     ],
 
@@ -208,6 +209,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
+        'Datatables' => Yajra\Datatables\Facades\Datatables::class,
 
     ],
 

@@ -1,0 +1,8 @@
+{
+  "name": "Qbus",
+  "version": "0.1",
+  "dependencies": {
+    "font-awesome": "~4",
+    "d3" : "~3"
+  }
+}
