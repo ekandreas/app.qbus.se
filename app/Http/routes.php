@@ -12,7 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('pages.dashboard');
+	if( !isset($_COOKIE["qbus_demo"]) ) {
+		return redirect('https://www.qbus.se/');
+	}
+	else {
+	    return view('pages.dashboard');
+	}
+});
+
+Route::get('/demo', function () {
+	setcookie('qbus_demo', 'demo', time()+60*60*24);
+	return redirect('/');
 });
 
 /*
